@@ -1,13 +1,14 @@
-#include<stdio.h>
-int sum(int x, int n) {
-    if (x > n) return 0;
- 	return x + sum(x + 1, n);
+void increasing(int x,int n){
+	if(x>n) return; //Parameterized way.
+	printf("%d\n",x);
+	increasing(n+1);
+	return;
 }
-int main() {
-    int num;
-    printf("Enter the number : ");
-    scanf("%d", &num);
-    printf("Sum = %d\n",sum(1,num));
+int main(){
+int num;
+printf("Enter the number : ");
+scanf("%d",&num);
+increasing(1,num);
 
-    return 0;
+return 0;
 }
