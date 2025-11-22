@@ -1,7 +1,7 @@
 void increasing(int x,int n){
 	if(x>n) return; //Parameterized way.
 	printf("%d\n",x);
-	increasing(n+1);
+	increasing(x+1,n);
 	return;
 }
 int main(){
